@@ -9,28 +9,14 @@ public class Principal {
     static Scanner leia = new Scanner(System.in);
 
     public static void main(String[] args) {
-        
-        //COMENTARIOS PARA ESTUDO	
-        /*for(int indice=10;indice <=  5;indice++){
-            System.out.println("Valor de indice do for: "+indice);
-        }
-        
-        int indice = 10; 
-        while(indice <= 5){
-           System.out.println("Valor de indice do while: "+indice);  
-           indice++;
-        }
-        indice = 10;
-        do{
-          System.out.println("Valor de indice com o do while: "+indice);  
-          indice++;   
-        }while(indice <= 5); */
-		
+        		
         do{
             System.out.println("#### MEU SOFTWARE ####");
             System.out.println("1-Descobrir se o numero e par ou impar");
             System.out.println("2-Descobrir se o numero e positivo ou negativo");
-            System.out.print("Escolha uma opcao");
+            System.out.println("3-Calcular IMC");
+            System.out.println("4-Tabuada de um numero");
+            System.out.print("Escolha uma opcao do menu: ");
 
             opcao = leia.next();
 
@@ -38,13 +24,25 @@ public class Principal {
                 parOuImpar();
             } else if (opcao.equals("2")) {
                 positivoOuNegativo();
-            } else{
-                System.out.println("Opção nao encontrada");
+            }else if (opcao.equals("3")) {
+                imc();
+            }else if (opcao.equals("4")) {
+                tabuada();
+            }else{
+                System.out.println("Opcao nao encontrada");
             }
             
             System.out.println("Digite sair para finalizar ou qualquer outra tecla para continuar.");
             opcao = leia.next();
         }while(!opcao.equals("sair"));
+    }
+    
+     public static void imc() {
+        
+    }
+    
+    public static void tabuada() {
+        
     }
 
     public static void parOuImpar() {
